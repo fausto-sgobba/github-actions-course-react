@@ -28,7 +28,7 @@ jobs:
       - name: Use NodeJS
         uses: actions/setup-node@v1
         with:
-          node-version: "14.x"
+          node-version: "16.x"
       - run: npm ci
       - run: npm run format:check
       - run: npm test -- --coverage
@@ -57,11 +57,13 @@ jobs:
         run: |
           zip -r build.zip ./build        
           zip -r coverage.zip ./coverage
-          ls -la
 
       - name: Create a Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: npx semantic-release
+        run: |
+          node -v
+          ls -la
+          run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
