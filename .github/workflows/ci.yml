@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [develop, master]
   push:
-    branches: [develop, master, workflow]
+    branches: [develop, master]
 
 jobs:
   build:
@@ -53,18 +53,17 @@ jobs:
           path: build
 
       - name: Zip Assets
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master' || github.ref == 'refs/heads/workflow'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
           zip -r build.zip ./build        
           zip -r coverage.zip ./coverage
 
       - name: Create a Release
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master' || github.ref == 'refs/heads/workflow'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
           node -v
           ls -la
-          npx semantic-release --debug --branches workflow
-        # run: npx semantic-release
+          run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
