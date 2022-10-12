@@ -63,7 +63,7 @@ jobs:
         run: |
           node -v
           ls -la
-          run: npx semantic-release
+          npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
