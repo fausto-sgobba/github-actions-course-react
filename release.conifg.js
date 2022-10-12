@@ -1,5 +1,5 @@
 module.exports = {
-  branches: "master",
+  branches: ["master", "workflow"],
   repositoryUrl: "https://github.com/fausto-sgobba/github-actions-course-react",
   plugins: [
     "@semantic-release/commit-analyzer",
