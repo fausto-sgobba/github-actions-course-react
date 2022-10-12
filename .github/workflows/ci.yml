@@ -61,7 +61,8 @@ jobs:
 
       - name: Create a Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/master' || github.ref == 'refs/heads/workflow'
-        run: npx semantic-release
+        run: npx semantic-release --branches workflow
+        # run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
