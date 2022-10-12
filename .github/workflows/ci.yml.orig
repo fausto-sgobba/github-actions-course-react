@@ -53,14 +53,22 @@ jobs:
           path: build
 
       - name: Zip Assets
+<<<<<<< HEAD
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master' || && github.ref == 'refs/heads/workflow'
+=======
         if: github.event_name == 'push' && github.ref == 'refs/heads/master' || github.ref == 'refs/heads/workflow'
+>>>>>>> develop
         run: |
           zip -r build.zip ./build        
           zip -r coverage.zip ./coverage
           ls -la
 
       - name: Create a Release
+<<<<<<< HEAD
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master' || && github.ref == 'refs/heads/workflow'
+=======
         if: github.event_name == 'push' && github.ref == 'refs/heads/master' || github.ref == 'refs/heads/workflow'
+>>>>>>> develop
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
