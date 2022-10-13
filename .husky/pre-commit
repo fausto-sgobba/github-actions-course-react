@@ -1,6 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx @zeit/ncc build ./.github/actions/hello/src/index.js -o ./.github/actions/hello/index.js
+rm -rf ./.github/actions/hello/dist
+npx @zeit/ncc build ./.github/actions/hello/index.js -o ./.github/actions/hello/dist
 git add ./.github/actions/hello/dist/index.js
 npx lint-staged
