@@ -1,0 +1,14 @@
+name: Hello World
+author: Fausto Sgobba
+description: First demo action
+inputs:
+  who-to-greet:
+    description: 'Who to greet'
+    required: true
+    default: Fausto
+outputs:
+  time:
+    description: 'The greeting time'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
