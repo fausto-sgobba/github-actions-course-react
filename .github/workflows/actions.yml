@@ -1,7 +1,7 @@
 name: Actions
 on:
   push:
-    branches: [workflows]
+    branches: [workflow]
 jobs:
   testing-action:
     runs-on: ubuntu-latest
