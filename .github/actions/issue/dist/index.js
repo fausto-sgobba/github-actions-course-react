@@ -1934,7 +1934,7 @@ module.exports = /******/ (function (modules, runtime) {
           repo: github.context.repo.repo,
           title,
           body,
-          assignees: assignees ? assignees.split("\n") : undefined,
+          assignees: assignees ? assignees.split(",") : undefined,
         });
 
         core.setOutput("response", JSON.stringify(response.data, null, "\n"));
