@@ -18197,7 +18197,7 @@ module.exports = /******/ (function (modules, runtime) {
       const github = __webpack_require__(484);
 
       try {
-        throw new Error("intentional error");
+        // throw new Error("intentional error");
         const name = core.getInput("who-to-greet");
         console.log(`hello ${name}`);
 
