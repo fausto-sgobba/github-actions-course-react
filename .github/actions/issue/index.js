@@ -18,7 +18,7 @@ const run = async () => {
       assignees: [github.context.payload.pusher.name],
     });
 
-    core.setOutput("response", JSON.stringify(response.data, null, "\n"));
+    core.setOutput("response", JSON.stringify(response.data));
   } catch (error) {
     core.setFailed(error.message);
   }
