@@ -18198,7 +18198,7 @@ module.exports = /******/ (function (modules, runtime) {
 
       try {
         core.debug("Hello action execution started");
-        core.warn("Example warning debug log");
+        core.warning("Example warning debug log");
         core.error("Example error debug log");
 
         // throw new Error("intentional error");
