@@ -15,11 +15,11 @@ jobs:
           body: Issue body
           # assignees: 'fausto-sgobba,aiken3000'
       - run: |
-          echo ${{ steps.issue.outputs.issue }}
+          echo ${{ steps.issue.outputs.response }}
       - uses: ./.github/actions/hello
         id: hello
         with:
           who-to-greet: 'Everybody'
       - run: |
-          echo 'Time: ${{ steps.hello.outputs.response }}'
+          echo 'Time: ${{ steps.hello.outputs.time }}'
           echo HELLO: $HELLO
