@@ -1927,7 +1927,7 @@ module.exports = /******/ (function (modules, runtime) {
         const body = core.getInput("body");
         const assignees = core.getInput("assignees");
 
-        const oktokit = new github.GitHub(token);
+        const oktokit = new github.getOctokit(token);
 
         const response = oktokit.issues.create({
           owner: github.context.repo.owner,
