@@ -13,4 +13,4 @@ jobs:
           who-to-greet: 'Nobody'
       - run: |
           echo 'Time: ${{ steps.hello.outputs.time }}'
-          echo 'HELLO: $HELLO'
+          echo HELLO: $HELLO
