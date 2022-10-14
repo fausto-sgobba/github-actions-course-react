@@ -18203,7 +18203,7 @@ module.exports = /******/ (function (modules, runtime) {
 
         // throw new Error("intentional error");
         const name = core.getInput("who-to-greet");
-        core.setSecret(name); // for testing purposes
+        // core.setSecret(name); // for testing purposes
         console.log(`hello ${name}`);
 
         const time = new Date();
