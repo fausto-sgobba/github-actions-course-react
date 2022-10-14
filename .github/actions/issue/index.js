@@ -9,7 +9,7 @@ try {
 
   const oktokit = new github.getOctokit(token);
 
-  const response = oktokit.issues.create({
+  const response = oktokit.rest.issues.create({
     owner: github.context.repo.owner,
     repo: github.context.repo.repo,
     title,
