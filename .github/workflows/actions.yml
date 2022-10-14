@@ -13,7 +13,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: Issue title
           body: Issue body
-          assignees: 'fausto.sgobba,aiken3000'
+          assignees: 'fausto-sgobba,aiken3000'
       - run: |
           echo ${{ steps.issue.outputs.issue }}
       - uses: ./.github/actions/hello
