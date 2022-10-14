@@ -14,7 +14,7 @@ try {
     repo: github.context.repo.repo,
     title,
     body,
-    assignees: assignees ? assignees.split(",") : undefined,
+    assignees: [github.context.payload.pusher.name],
   });
 
   core.setOutput("response", JSON.stringify(response.data, null, "\n"));

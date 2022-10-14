@@ -11,9 +11,9 @@ inputs:
   body:
     description: 'Github body'
     required: true
-  assignees:
-    description: 'Github assignees'
-    required: true
+  # assignees:
+  #   description: 'Github assignees'
+  #   required: true
 outputs:
   issue:
     description: The issue object as a json string
